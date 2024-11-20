@@ -1,0 +1,1034 @@
+/* Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f5f9ff;
+}
+
+/* Barra de Navegación */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    height: 65px;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+nav a {
+    color: #4b5563;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+/* Menú Móvil */
+.menu-button-mobile {
+    display: none;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-icon {
+    font-size: 1.5rem;
+    color: #4b5563;
+}
+
+.nav-menu-mobile {
+    display: none;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    padding: 1rem 0;
+}
+
+.nav-menu-mobile.open {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    .menu-button-mobile {
+        display: block;
+    }
+}
+
+/* Hero Section */
+.bienvenido {
+    margin-top: 6rem;
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(to bottom, #ebf8ff, white);
+}
+
+.bienvenido-texto {
+    max-width: 800px;
+    margin: auto;
+    font-size: larger;
+}
+
+/* Estilo para el título */
+#titulo {
+    font-size: 3.5rem; /* Aumenta el tamaño de la fuente */
+    color: #1f2937; /* Color del texto principal */
+    font-weight: bold;
+    text-align: center; /* Centra el texto */
+    margin-left: -5rem; /* Saca el título a la izquierda */
+    margin-right: -5rem; /* Saca el título a la derecha */
+    padding: 0 2rem; /* Espacio adicional dentro del contenedor, puedes ajustarlo */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+/* Para el subtítulo de "Profesional" */
+#titulo .blue {
+    color: #2563eb; /* Color azul para "Profesional" */
+}
+
+.bienvenido-texto p {
+    font-size: 1.25rem;
+    color: #4b5563;
+    margin-top: 1rem;
+}
+
+/* Estilos generales */
+.buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem; /* Espacio adicional entre el texto de arriba y los botones */
+}
+
+.servicio-boton, .contacto-boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1.125rem;
+}
+
+.servicio-boton {
+    background-color: #2563eb; /* Fondo azul para el botón "Ver Servicios" */
+    color: white; /* Texto blanco */
+}
+
+.servicio-boton:hover {
+    background-color: #1d4ed8; /* Cambio de color al pasar el ratón */
+}
+
+.contacto-boton {
+    color: #2563eb; /* Texto azul para "Contáctanos" */
+    border: 2px solid #2563eb; /* Borde azul */
+}
+
+.contacto-boton:hover {
+    background-color: #2563eb;
+    color: white;
+}
+
+/* Clases de utilidad */
+.ml-2 {
+    margin-left: 0.5rem;
+}
+
+.w-5 {
+    width: 1.25rem;
+}
+
+.h-5 {
+    height: 1.25rem;
+}
+
+/* Responsividad para botones */
+@media (min-width: 640px) {
+    .buttons {
+        flex-direction: row;
+    }
+}
+
+
+
+
+/* Estilo para el botón "Solicitar Cotización" */
+.request-quote-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    background-color: #2563eb; /* Fondo azul */
+    color: white;
+    text-decoration: none;
+    font-size: 1.125rem; /* Tamaño de fuente */
+    border-radius: 2rem; /* Bordes redondeados */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0 auto; /* Alineación al centro */
+    width: max-content; /* El ancho se ajusta al contenido */
+    text-align: center; /* Asegura que el texto esté centrado */
+    margin-top: 2rem
+}
+
+.request-quote-btn:hover {
+    background-color: #1d4ed8; /* Cambio de color al pasar el ratón */
+}
+
+/* Alineación centrada del contenedor del botón en su contenedor */
+.request-quote-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem; /* Aumenta el espacio entre el texto y el botón */
+}
+
+
+
+/* Footer */
+footer {
+    text-align: center; /* Alinea el texto en el pie de página al centro */
+    margin-top: auto; /* Empuja el pie de página al fondo de la página */
+    padding: 1rem 0;
+    background-color: #2563eb;
+    color: white;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    width: 55px;  /* Establecer el tamaño adecuado del botón */
+    height: 55px;
+    bottom: 20px;  /* Posición del botón en la parte inferior */
+    right: 20px;  /* Posición del botón a la derecha */
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: transform 0.3s ease;  /* Efecto de transición al pasar el ratón */
+}
+
+.whatsapp-float img {
+    width: 100%;  /* El tamaño de la imagen se ajusta al contenedor */
+    height: 100%;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);  /* Efecto de agrandar al pasar el ratón */
+}
+
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f5f9ff;
+}
+
+/* Contact Section */
+.contact-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: white;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+  }
+  
+  .container {
+    max-width: 900px; /* Puedes aumentar el tamaño para que el contenido ocupe más espacio */
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: #1f2937;
+  }
+  
+  .description {
+    font-size: 1.125rem;
+    color: #4b5563;
+  }
+  
+  .max-w-2xl {
+    max-width: 42rem;
+  }
+  
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .mb-16 {
+    margin-bottom: 4rem;
+  }
+  
+  .grid-container {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr;
+    justify-items: center; /* Centra los elementos dentro de la grid */
+  }
+  
+  .contact-info {
+    background-color: #f9fafb;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 100%; /* Hace que el contenedor ocupe todo el espacio disponible */
+    max-width: 600px; /* Establece un límite de tamaño para el contenedor */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total */
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1f2937;
+  }
+  
+  .contact-items {
+    margin-top: 1.5rem;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .icon {
+    color: #2563eb;
+  }
+  
+  .text {
+    color: #4b5563;
+    transition: color 0.3s ease;
+  }
+  
+  .text:hover {
+    color: #2563eb;
+  }
+  
+  /* Ajustes para los enlaces de WhatsApp y Email */
+  .whatsapp-link {
+    color: #25D366; /* Color verde de WhatsApp */
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .whatsapp-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Ajustar tamaño de las imágenes en la sección de contacto */
+  .contact-item img {
+    width: 30px;  /* Tamaño ajustado para las imágenes */
+    height: 30px;
+    object-fit: cover;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr; /* Establece una sola columna en pantallas pequeñas */
+    }
+  }
+  
+  
+
+
+
+
+
+/* Servicios Section */
+#servicios {
+    background-color: #fff;
+    padding: 40px 20px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.section-header p {
+    font-size: 18px;
+    color: #555;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: #ffffff; /* Fondo blanco para el cuadrado */
+    border-radius: 12px; /* Bordes ligeramente redondeados */
+    overflow: hidden; /* Asegura que las imágenes no salgan del contorno */
+    width: 30%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para dar contraste con el fondo */
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding: 20px;
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px; /* Puedes ajustar la altura según lo necesites */
+    object-fit: cover;
+    border-radius: 12px 12px 0 0; /* Bordes redondeados en la parte superior de la imagen */
+}
+
+.service-card h3 {
+    font-size: 24px;
+    color: #2563eb;
+    margin: 10px 0;
+}
+
+.service-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+
+
+/* Contact Section */
+#testimonios {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: white;
+}
+
+.max-w-7xl {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  color: #4b5563;
+}
+
+.max-w-2xl {
+  max-width: 42rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
+.grid {
+  display: grid;
+  gap: 3rem;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.md\:grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.lg\:grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.bg-gray-50 {
+  background-color: #f9fafb;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hover\:shadow-xl:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.transition-shadow {
+  transition: box-shadow 0.3s ease;
+}
+
+.text-gray-700 {
+  color: #4b5563;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.space-x-4 {
+  margin-right: 1rem;
+}
+
+.w-12 {
+  width: 3rem;
+}
+
+.h-12 {
+  height: 3rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-gray-900 {
+  color: #1f2937;
+}
+
+.text-gray-500 {
+  color: #6b7280;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.w-5 {
+  width: 1.25rem;
+}
+
+.h-5 {
+  height: 1.25rem;
+}
+
+.text-yellow-400 {
+  color: #fbbf24;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .grid-cols-1 {
+    grid-template-columns: 1fr;
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Grid de fotos */
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajusta automáticamente las columnas */
+  justify-items: center; /* Centra las imágenes horizontalmente */
+}
+
+.photo-card img {
+  width: 100%; /* Asegura que ocupe el espacio del contenedor */
+  max-width: 300px; /* Ajusta el ancho máximo para mayor legibilidad */
+  max-height: 400px; /* Ajusta la altura máxima */
+  object-fit: cover; /* Mantiene la proporción de la imagen */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.photo-card img:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 800px; /* Tamaño grande para que sea legible */
+  animation: zoom 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Estilos para el modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 800px; /* Tamaño máximo de la imagen */
+  animation: zoom 0.6s;
+}
+
+@keyframes zoom {
+  from {
+      transform: scale(0);
+  }
+  to {
+      transform: scale(1);
+  }
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+/* Estilos para la Sección de Videos */
+.video-grid {
+  display: flex;
+  justify-content: center;  /* Alinea los videos al centro */
+  gap: 20px;
+  flex-wrap: nowrap;  /* Asegura que los videos estén siempre en una sola fila */
+  background-color: #fff; /* Fondo blanco para la sección de videos */
+}
+
+.card {
+  background-color: #fff; /* Fondo blanco para las tarjetas de video */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+  flex: 1;
+  max-width: 30%;  /* Reduce el ancho máximo de las tarjetas para que sean más estrechas */
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.video-thumbnail {
+  position: relative;
+  cursor: pointer;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  height: 200px;  /* Ajusta la altura de la imagen para que se vean más compactas */
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.card:hover .video-thumbnail img {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.video-thumbnail:hover .overlay {
+  opacity: 1;
+}
+
+.play-icon {
+  font-size: 32px;
+  color: #007bff;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 50%;
+  border: 3px solid #007bff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.play-icon:hover {
+  transform: scale(1.1);
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.video-title {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.video-description {
+  font-size: 14px;
+  color: #666;
+}
+
+
+
+
+/* Estilos para la Sección de Historia */
+.history-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+}
+
+.container {
+  max-width: 112rem;
+  margin: 0 auto;
+}
+
+.history-card {
+  border-radius: 1rem;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.history-card:hover {
+  transform: translateY(-5px);
+}
+
+.text-box {
+  padding: 2.5rem;
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+.text-box h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.text-box p {
+  font-size: 1.125rem;
+  color: #4b5563;
+  line-height: 1.75rem;
+  margin-bottom: 1.25rem;
+}
+
+
+
+
+
+
+
+
+
+
+/* Media Query para Teléfonos */
+@media (max-width: 768px) {
+  /* Ajustes generales */
+  .header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem;
+  }
+
+  .logo-title {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+  }
+
+  nav ul {
+      display: none; /* Oculta el menú principal en teléfonos */
+  }
+
+  .menu-button-mobile {
+      display: block; /* Muestra el botón de menú móvil */
+  }
+
+  .nav-menu-mobile.open {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+  }
+
+  /* Sección Bienvenida */
+  .bienvenido {
+      padding: 2rem 1rem;
+  }
+
+  #titulo {
+      font-size: 2.5rem; /* Reduce el tamaño del título */
+  }
+
+  .bienvenido-texto p {
+      font-size: 1rem; /* Reduce el tamaño del texto de bienvenida */
+  }
+
+  .buttons {
+      flex-direction: column;
+      gap: 0.5rem;
+  }
+
+  /* Sección de Servicios */
+  .services-container {
+      flex-direction: column;
+      gap: 2rem;
+  }
+
+  .service-card {
+      width: 100%; /* Ocupa todo el ancho disponible */
+  }
+
+  /* Sección de Videos */
+  .video-grid {
+      flex-wrap: wrap;
+      gap: 1rem;
+  }
+
+  .card {
+      width: 100%; /* Ajusta el ancho al 100% */
+  }
+
+  /* Sección de Testimonios */
+  .grid {
+      grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+  }
+
+  /* Sección de Historia */
+  .history-card {
+      padding: 2rem;
+  }
+
+  /* Sección de Contacto */
+  .contact-info {
+      max-width: 100%; /* Ajusta el ancho máximo al 100% */
+      padding: 1rem;
+  }
+
+  /* Ajuste del botón de WhatsApp */
+  .whatsapp-float {
+      width: 45px; /* Reduce el tamaño del botón */
+      height: 45px;
+  }
+}
+
+
+/* Ajustes específicos para pantallas pequeñas */
+@media (max-width: 768px) {
+  /* Ajuste del título */
+  #titulo {
+      font-size: 2rem; /* Reduce el tamaño de la fuente */
+      text-align: center; /* Centra el texto */
+      margin: 0; /* Elimina los márgenes laterales */
+      white-space: normal; /* Permite que el texto se divida en varias líneas */
+      padding: 0; /* Ajusta el padding si es necesario */
+  }
+
+  .bienvenido-texto p {
+      font-size: 1rem; /* Ajusta el tamaño del texto */
+      margin: 0.5rem 0; /* Reduce el margen superior e inferior */
+  }
+
+  /* Sección de botones */
+  .buttons {
+      flex-direction: column; /* Asegura que los botones se apilen verticalmente */
+      gap: 0.5rem; /* Reduce el espacio entre los botones */
+  }
+
+  /* Ajuste de las tarjetas de servicio */
+  .services-container {
+      flex-direction: column; /* Apila las tarjetas verticalmente */
+      gap: 1rem; /* Ajusta el espacio entre las tarjetas */
+  }
+
+  .service-card {
+      width: 100%; /* Asegura que las tarjetas ocupen todo el ancho disponible */
+  }
+
+  /* Ajuste del logotipo y del texto de la cabecera */
+  .logo-title {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%; /* Asegura que se adapte al ancho de la pantalla */
+  }
+
+  .logo {
+      height: 50px; /* Reduce el tamaño del logotipo */
+  }
+}

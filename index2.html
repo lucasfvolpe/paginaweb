@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Vanguard System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="logo-title">
+                <a href="index.html"><img src="imagenes/logo1.png" alt="logo-new-vanguard" class="logo"></a>
+                <p class="logo-text">New Vanguard System</p>
+            </div>
+            <nav id="tabs">
+                <ul>
+                    <!-- Modificado para redirigir a secciones de la misma página -->
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#historia">Sobre Nosotros</a></li> 
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Botón de Menú Móvil -->
+            <div class="menu-button-mobile">
+                <button class="menu-toggle" onclick="toggleMenu()">
+                    <span class="menu-icon">☰</span>
+                </button>
+            </div>
+        </div>
+    
+        <!-- Menú de Navegación (Móvil) -->
+        <div id="menu-mobile" class="nav-menu-mobile">
+        
+            <a href="#servicios" class="nav-link">Servicios</a>
+            <a href="#testimonios" class="nav-link">Testimonios</a>
+            <a href="#nosotros" class="nav-link">Sobre Nosotros</a>
+            <a href="#contacto" class="nav-link">Contacto</a>
+        </div>
+    </header>
+    
+
+    <main>
+        <section id="bienvenidos">
+            <div class="bienvenido">
+                <div class="bienvenido-texto">
+                    <h1 id="titulo">Servicio de limpieza <span class="blue"> Profesional</span></h1>
+                    <p>Transformamos tus espacios con servicios de limpieza especializados y de alta calidad. Confía en nuestros expertos para mantener tus ambientes impecables.</p>
+                </div>
+                <div class="buttons">
+                    <a href="#servicios" class="servicio-boton">
+                        Ver Servicios
+                        <span class="ml-2 w-5 h-5"> → </span>
+                    </a>
+                    <a href="#contacto" class="contacto-boton">
+                        Contáctanos
+                    </a>
+                </div>
+            </div>
+       
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicios">
+            <div class="section-header">
+                <h2>Nuestros Servicios</h2>
+                <p>Explora nuestra gama de servicios de limpieza profesional. Transformamos tus espacios con calidad garantizada.</p>
+            </div>
+
+            <div class="services-container">
+                <div class="service-card">
+                    <img src="Imagenes/alfombras.png" alt="Limpieza de Alfombras">
+                    <h3>Limpieza de Alfombras</h3>
+                    <p>Eliminamos manchas y polvo para que tus alfombras luzcan como nuevas.</p>
+                </div>
+                <div class="service-card">
+                    <img src="Imagenes/sillones.png" alt="Limpieza de sillones">
+                    <h3>Limpieza de silones</h3>
+                    <p>Recupera la frescura y apariencia de tus sillones con nuestro servicio especializado.</p>
+                </div>
+                <div class="service-card">
+                    <img src="Imagenes/asdas.png" alt="Venta de felpudos">
+                    <h3>Felpudos</h3>
+                    <p>Felpos de alta calidad, resistentes y decorativos, perfectos para tu hogar o negocio. ¡Mantén tu entrada limpia y con estilo!</p>
+                </div>
+            </div>
+            <a href="https://wa.me/1134012048?text=Hola%2C+quisiera+pedir+una+cotizaci%C3%B3n" target="_blank" class="request-quote-btn">
+                Solicitar Cotización
+            </a>
+        </section>
+
+        <section class="section" id="videos">
+            <div class="video-grid">
+                <a href="https://youtu.be/i0sCqQSSjAc" target="_blank" class="card">
+                    <div class="video-thumbnail">
+                        <img src="Imagenes/video1.JPG" alt="Video 1 Thumbnail">
+                        <div class="overlay">
+                            <div class="play-icon">▶</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="video-title"> Limpieza Profunda de Alfombras</h3>
+                        
+                    </div>
+                </a>
+            
+                <a href="https://youtube.com/shorts/e1tJrP-6srk" target="_blank" class="card">
+                    <div class="video-thumbnail">
+                        <img src="Imagenes/video2.JPG" alt="Video 2 Thumbnail">
+                        <div class="overlay">
+                            <div class="play-icon">▶</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="video-title">Limpieza de alfombras</h3>
+                        
+                    </div>
+                </a>
+            </div>
+            
+        </section>
+        
+        <script>
+            function openVideo(videoId) {
+                window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
+            }
+        </script>
+
+<!-- Testimonios de Clientes Renombrados -->
+<section id="testimonios" class="py-20">
+    <div class="container">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Reconocimientos y Testimonios</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                Nuestros clientes nos avalan con su confianza y satisfacción.
+            </p>
+        </div>
+
+        <!-- Grid de Fotos -->
+        <div class="grid">
+            <!-- Foto 1 -->
+            <div class="photo-card" onclick="openModal('imagenes/test6.png')">
+                <img src="imagenes/test4.jpg" alt="Reconocimiento 1">
+            </div>
+            <!-- Foto 2 -->
+            <div class="photo-card" onclick="openModal('imagenes/test5.jpg')">
+                <img src="imagenes/test5.jpg" alt="Reconocimiento 2">
+            </div>
+            <!-- Foto 3 -->
+            <div class="photo-card" onclick="openModal('imagenes/test4.jpg')">
+                <img src="imagenes/test3.jpg" alt="Reconocimiento 3">
+            </div>
+            <!-- Foto 4 -->
+            <div class="photo-card" onclick="openModal('imagenes/test3.jpg')">
+                <img src="imagenes/test2.jpeg" alt="Reconocimiento 4">
+            </div>
+            <!-- Foto 5 -->
+            <div class="photo-card" onclick="openModal('imagenes/test2.jpeg')">
+                <img src="imagenes/Test1.jpeg" alt="Reconocimiento 5">
+            </div>
+            <!-- Foto 6 -->
+            <div class="photo-card" onclick="openModal('imagenes/Test1.jpeg')">
+                <img src="imagenes/test6.png" alt="Reconocimiento 6">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+</section>
+
+
+<!-- Historia de Vanguard System -->
+<section class="history-section py-20" id="historia">
+    <div class="container mx-auto px-6 lg:px-20">
+        <div class="history-card bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="text-box p-10">
+                <h2 class="text-3xl font-extrabold text-gray-800 mb-4">Nuestra Historia</h2>
+                <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+                    Vanguard System comenzó como una pequeña empresa con una visión clara: transformar la forma en la que
+                    las organizaciones gestionan sus sistemas. Con el tiempo, hemos crecido y evolucionado, pero nuestra
+                    misión sigue siendo la misma. Hoy, somos líderes en la industria, reconocidos por nuestro compromiso
+                    con la innovación y la excelencia.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Nos esforzamos cada día para ofrecer soluciones de alta calidad y seguir siendo el socio de confianza
+                    de nuestros clientes en su camino hacia el éxito.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+   <!-- Contact Section (integrado) -->
+<section class="contact-section py-20 bg-white" id="contacto">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="title mb-4">Contáctanos</h2>
+            <p class="description max-w-2xl mx-auto">
+                Estamos aquí para ayudarte. Contáctanos para obtener más información sobre nuestros servicios
+                o solicitar una cotización.
+            </p>
+        </div>
+
+        <div class="grid-container gap-12">
+            <div class="contact-info">
+                <h3 class="subtitle mb-6">Información de Contacto</h3>
+                <div class="contact-items">
+                    <!-- Teléfono / WhatsApp -->
+                    <div class="contact-item">
+                        <img src="imagenes/whicono.png" alt="Teléfono" class="contact-icon">
+                        <a href="https://wa.me/1134012048" target="_blank" class="text whatsapp-link">Contáctanos por WhatsApp</a>
+                    </div>
+                    <!-- Email -->
+                    <div class="contact-item">
+                        <img src="imagenes/mail.png" alt="Email" class="contact-icon">
+                        <a href="mailto:lucasfvolpe@gmail.com" class="text">lucasfvolpe@gmail.com</a>
+                    </div>
+                    <!-- Dirección -->
+                    <div class="contact-item">
+                        <img src="imagenes/direccion.png" alt="Dirección" class="contact-icon">
+                        <p class="text">Av José María Moreno 1270</p>
+                    </div>
+                    <!-- Horario de Atención -->
+                    <div class="contact-item">
+                        <img src="imagenes/hora.png" alt="Horario" class="contact-icon">
+                        <p class="text">Lunes a Viernes de 8:00 a 18:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    </main>
+
+    <footer>
+        <p style="color: whitesmoke;">New Vanguard System © 2024. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Botón de WhatsApp Flotante -->
+    <a href="https://wa.me/1134012048" class="whatsapp-float" target="_blank">
+        <img src="imagenes/whatsapp2.png" alt="WhatsApp" class="whatsapp-icon">
+    </a>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu-mobile');
+            menu.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
